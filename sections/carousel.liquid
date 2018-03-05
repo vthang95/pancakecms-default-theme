@@ -1,0 +1,33 @@
+<div class="zg-carousel" style="width: 100%;">
+  <div class="owl-carousel">
+    <div><img src="{{ section.settings.carousel_image_1 }}" /></div>
+    <div><img src="{{ section.settings.carousel_image_2 }}" /></div>
+    <div><img src="{{ section.settings.carousel_image_3 }}" /></div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Carouel",
+  "settings": [
+    {
+      "type": "text",
+      "id": "carousel_image_1",
+      "default_value": "",
+      "label": "Carousel image 1"
+    },
+    {
+      "type": "text",
+      "label": "Carousel image 2",
+      "default_value": "",
+      "id": "carousel_image_2"
+    },
+    {
+      "type": "text",
+      "label": "Carousel image 3",
+      "default_value": "",
+      "id": "carousel_image_3"
+    }
+  ]
+}
+{% endschema %}

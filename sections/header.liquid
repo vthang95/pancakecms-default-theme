@@ -1,0 +1,49 @@
+<div class="header" id="header">
+  {% if section.settings.header_align == "center" %}
+    <div class="header-center" id="header-center">
+  {% endif %}
+
+  <img src="{{ section.settings.header_logo }}" height="45px" width="auto" />
+  <div class="header-menu">
+    <a><a href="/" class="menu-item">home</a> </a>
+    <a><a href="/blog" class="menu-item">blog</a> </a>
+    <a><a href="/shop" class="menu-item">shop</a> </a>
+    <a><a href="/pages" class="menu-item">pages</a> </a>
+    <a><a href="/contact" class="menu-item">contact</a> </a>
+  </div>
+
+  <div class="header-tools">
+      <i class="fa fa-search"></i>
+      <i class="fa fa-heart"></i>
+      <i class="fa fa-shopping-bag"></i>
+      <span class="mention">0</span>
+  </div>
+
+  {% if section.settings.header_align == "center" %}
+    </div>
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "Header",
+  "settings": [
+    {
+      "type": "radio",
+      "id": "header_align",
+      "default_value": "left",
+      "label": "Centering your header",
+      "options": [
+        {"label": "Left", "value": "left"},
+        {"label": "Center", "value": "center"}
+      ]
+    },
+    {
+      "type": "text",
+      "id": "header_logo",
+      "default_value": "",
+      "label": "Logo"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,58 @@
+{
+  "sections": {
+    "subscribe-feedback": {
+      "type": "subscribe-feedback",
+      "settings": {}
+    },
+    "product": {
+      "settings": {}
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "header_logo": "http://zeitget.herokuapp.com/static/images/zeit.png",
+        "header_align": "left"
+      }
+    },
+    "grid-products": {
+      "type": "grid-products",
+      "settings": {}
+    },
+    "grid-posts": {
+      "type": "grid-posts",
+      "settings": {}
+    },
+    "grid-image": {
+      "type": "grid-image",
+      "settings": {}
+    },
+    "footer": {
+      "type": "footer",
+      "settings": {}
+    },
+    "collection-list": {
+      "type": "collection-list",
+      "settings": {}
+    },
+    "carousel": {
+      "type": "carousel",
+      "settings": {
+        "carousel_image_3": "http://wp.nootheme.com/umbra/wp-content/uploads/Home-V1-Slide-3.jpg",
+        "carousel_image_2": "http://wp.nootheme.com/umbra/wp-content/uploads/Home-V1-_-Slide-2.jpg",
+        "carousel_image_1": "http://wp.nootheme.com/umbra/wp-content/uploads/homeslider1.jpg"
+      }
+    },
+    "180": {
+      "type": "email-form",
+      "settings": {
+        "email": "vietthanghp95@gmail.com"
+      }
+    }
+  },
+  "content_for_index": [
+    "carousel",
+    "grid-image",
+    "grid-products",
+    "grid-posts"
+  ]
+}
