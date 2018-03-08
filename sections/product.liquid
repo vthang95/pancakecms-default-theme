@@ -2,8 +2,8 @@
   <section class="shop-head">
     <div class="shop-head-container">
       <div class="shop-head-content">
-        <h1 class="title">Ten </h1>
-        <p style="margin-bottom: 15px">Shop through our latest selection of Armchair and Sofa ZEIGET design.</p>
+        <h1 class="title">{{ global.product.name }}</h1>
+        <p style="margin-bottom: 15px">Product</p>
         <a href="/" style="color: #fff;">Home</a>
       </div>
     </div>
@@ -23,10 +23,14 @@
 
     <div class="zg-pdetail--detail" style="width: 45%; padding: 20px 40px 20px 0">
       <div class="zg-pdetail--title">
-        <h2>Ten</h2>
-        <div style="color: #d2a637; font-size: 14px; margin-top: 15px">{retail} <strong style="font-size: 18px">{price}</strong></div>
+        <h2>{{ global.product.name }}</h2>
+        <div style="color: #d2a637; font-size: 14px; margin-top: 15px;">
+          <span style="text-decoration: line-through;">{{ global.product.sale_price }} vnd</span>
+          <strong style="font-size: 18px; text-decoration: none!important">
+            {{ global.product.price }} vnd
+          </strong></div>
         <div style="padding: 20px 0 30px; border-top: 1px solid #eeeeee; border-bottom: 1px solid #eeeeee; margin-top: 20px; font-size: 12px">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae tortor urna. Mauris non tincidunt ipsum, vel dignissim ipsum. Morbi erat sapien, hendrerit ut convallis eu, pretium eleifend sapien
+          {{ global.product.description }}
         </div>
         <div style="padding: 20px 0px; border-bottom: 1px solid #eeeeee">
           <div style="font-color: #77a464; font-size: 12px; margin-bottom: 15px">In Stock</div>
@@ -41,7 +45,11 @@
         </div>
 
         <div style="padding: 20px 0; border-bottom: 1px solid #eeeeee; font-size: 12px">
-          <div>CATEGORIES: Armchair, Decor</div>
+          <div>CATEGORIES:
+            {% for category in global.product.categories %}
+              <span>{{ category.name }}, </span>
+            {% endfor %}
+          </div>
           <div>TAG: Armchair</div>
         </div>
 
@@ -72,7 +80,7 @@
     </div>
 
     <div style="width: 80%; padding: 15px">
-      <p style="font-size: 12px">Despite looking like a long lost classic from Saarinen’sgreat studio, Foersom & Hiort-Lorenzen’s Flamingo was in fact launched at The Furniture Fair in Copenhagen in 2003. It has proven to be a very popular chair in a very short time for business and homes alike. The chair is a curved shell balanced on a slim wire foot. With its delicate outlines it is an example of the very best that modern upholstering technique has to offer. The shells are inordinately slender and sharply outlined. The development of moulded self supporting units has made it possible to fasten the elements to a light frame and create a strong chair with an elegant appearance. Flamingo has a subtle references to the wing span of a bird.</p>
+      {{ global.product.additional_info }}
     </div>
   </section>
 </div>
