@@ -16,7 +16,7 @@
   <!--end font-->
   <!--css-->
   <link href="http://zeitget.herokuapp.com/static/css/antd.min.2.13.9.css" rel="stylesheet" />
-  <link rel="stylesheet" type="text/css" href="{{ " theme.scss.css " | asset_url }}" />
+  <link rel="stylesheet" type="text/css" href="{{ "theme.scss.css " | asset_url }}" />
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css">
@@ -24,7 +24,7 @@
   <!--end css-->
   <!--script-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="{{ " xlight.js " | asset_url }}"></script>
+  <script src="{{ "xlight.js " | asset_url }}"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Shuffle/5.0.3/shuffle.min.js"></script>
   <!--end script-->
@@ -34,9 +34,11 @@
   <div class="layout">
     <div>
       <div id="header-mark" style="height: 85px; display: none;"></div>
+      {% section 'header' %}
 
       {{ content_for_layout }}
 
+      {% section 'footer' %}
     </div>
   </div>
 </body>
