@@ -5,7 +5,7 @@ const handleScroll = () => {
   const container = document.getElementById('header-center')
   if (header.getBoundingClientRect().top <= -100) {
     header.className = 'header header-fixed'
-    container.style.transition = '1s height ease-in'
+    if (container) container.style.transition = '1s height ease-in'
     mark.style.display = 'block'
   }
 
@@ -13,16 +13,20 @@ const handleScroll = () => {
     header.className = 'header'
     mark.style.display = 'none'
     header.style.top = '-85px'
-    container.style.width = 'inherit'
-    container.style.flexDirection = 'column'
-    container.style.alignItems = 'center'
+    if (container) {
+      container.style.width = 'inherit'
+      container.style.flexDirection = 'column'
+      container.style.alignItems = 'center'
+    }
   }
 
   if (mark.getBoundingClientRect().top < -120) {
     header.style.top = '0px';
-    container.style.width = '100%'
-    container.style.flexDirection = 'row'
-    container.style.justifyContent = 'space-between'
+    if (container) {
+      container.style.width = '100%'
+      container.style.flexDirection = 'row'
+      container.style.justifyContent = 'space-between'
+    }
   }
 }
 
