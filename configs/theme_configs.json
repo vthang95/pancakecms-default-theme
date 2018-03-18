@@ -30,10 +30,6 @@
       "type": "footer",
       "settings": {}
     },
-    "collection-list": {
-      "type": "collection-list",
-      "settings": {}
-    },
     "carousel": {
       "type": "carousel",
       "settings": {
@@ -42,17 +38,36 @@
         "carousel_image_1": "http://wp.nootheme.com/umbra/wp-content/uploads/homeslider1.jpg"
       }
     },
-    "180": {
-      "type": "email-form",
+    "96": {
+      "type": "collection-list",
       "settings": {
-        "email": "vietthanghp95@gmail.com"
-      }
+        "name": "Thang"
+      },
+      "blocks": {
+        "collection-list-1": {
+          "type": "category",
+          "settings": {
+            "category": "Hotest"
+          }
+        },
+        "collection-list-0": {
+          "type": "category",
+          "settings": {
+            "category": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection-list-1",
+        "collection-list-0"
+      ]
     }
   },
   "content_for_index": [
     "carousel",
     "grid-image",
     "grid-products",
-    "grid-posts"
+    "grid-posts",
+    "96"
   ]
 }

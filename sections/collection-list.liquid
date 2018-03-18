@@ -1,7 +1,28 @@
+<h1>Hi {{ section.settings.name }}</h1>
+
+{% for block in section.blocks %}
+  {% if block.type == "category" %}
+    <div>
+      <h2>{{ block.category.name }}</h2>
+      {% for product in block.category.products %}
+        <span><a href="{{ product.slug | product_url }}">{{ product.name }}</a></span>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endfor %}
+
 {% schema %}
 {
   "name": "Collection list",
-  "settings": [],
+  "max_blocks": 5,
+  "settings": [
+    {
+      "id": "name",
+      "type": "text",
+      "label": "Gretting",
+      "default_value": "Thang"
+    }
+  ],
   "preset": {
     "category": "Categories",
     "name": "Category list",
@@ -17,9 +38,14 @@
   "blocks": [
     {
       "type": "category",
-      "id": "category",
-      "label": "Category",
-      "settings": []
+      "name": "Category",
+      "settings": [
+        {
+          "id": "category",
+          "type": "category",
+          "label": "Category"
+        }
+      ]
     }
   ]
 }
